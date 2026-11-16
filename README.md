@@ -1,0 +1,35 @@
+# Portfólio Profissional Web
+
+## Título do projeto
+Portfólio Acadêmico com HTML e Bootstrap
+
+## Nome do aluno
+Matheus Henrique de Souza
+
+## Descrição do portfólio
+O portfólio é um Single Page Application (SPA) que reúne de forma visual o meu perfil profissional, meus conhecimentos em programação, uma listagem dos meus projetos em Python, C++ e Desenvolvimento Web, e links diretos para contato e networking. O objetivo principal do projeto foi fixar os conceitos práticos de design responsivo e demonstrar a evolução da organização do código utilizando frameworks.
+
+## Tecnologias utilizadas
+- **HTML5:** Para estruturação semântica de todo o conteúdo.
+- **CSS3:** Para a personalização do design e implementação das animações.
+- **Bootstrap 5:** Framework utilizado extensivamente para garantir a responsividade (Grid System) e fornecer componentes prontos (Navbars, Cards, Carousel e Botões).
+- **Devicon:** Biblioteca de ícones (CDN) usada para representar graficamente as tecnologias estudadas.
+- **GitHub Pages:** Para hospedagem e publicação online.
+
+## Link do site publicado
+*(Atenção professor: o link será inserido aqui automaticamente após o deploy no repositório)*
+[INSERIR SEU LINK DO GITHUB PAGES AQUI - ex: https://seu-usuario.github.io/portfolio]
+
+## Explicação do funcionamento do projeto
+O funcionamento segue a lógica de um site estático. A estrutura utiliza o elemento `<nav>` como um menu fixo no topo (`sticky-top`) que direciona o usuário por meio de links de ancoragem local (`href="#projetos"`). O corpo (body) contém 4 seções principais separadas por `<section>`.
+O projeto é inteiramente *mobile first*: graças à classe `navbar-expand-lg` e à propriedade de coluna `col-md-6`, todos os elementos de grid e menu que aparecem alinhados lateralmente em telas de computador se convertem automaticamente em listas e botões em formato empilhado para telas de celulares.
+
+## Descrição do recurso novo adicionado
+Com o objetivo de entregar algo além da estrutura base proposta nas aulas, o projeto foi estendido através de **dois novos recursos baseados em CSS**:
+1. **Smooth Scroll (Rolagem Suave):** Adiciona uma fluidez melhorada à navegação via menu âncora.
+2. **Interação Visual e Animações de Hover:** Criação de uma animação fluida baseada em transformações nos cards da seção de projetos.
+
+## Explicação de como esse recurso foi implementado
+Para implementar estes recursos complementares, foi criado o arquivo `style.css` (Externo). 
+- O **Smooth Scroll** foi aplicado inserindo a propriedade de comportamento `scroll-behavior: smooth` diretamente sobre o elemento raiz `html`. Também foi necessário declarar a propriedade `scroll-margin-top: 70px` nas tags `section` para impedir que o título de cada categoria ficasse coberto pelo menu de topo fixo após a conclusão da rolagem.
+- Para o **Hover Animado**, foi inventada uma classe CSS independente chamada `.card-animado`. Nela, definiu-se a regra de comportamento `transition: 0.3s ease`. Posteriormente, através da pseudo-classe `:hover` (que captura o cursor sobre o elemento), as propriedades `transform: translateY(-10px)` e `box-shadow` foram ativadas simultaneamente. Dessa forma, quando o usuário explora a aba de projetos, os cards "saltam", fornecendo feedback visual imediato de que a área é interativa.

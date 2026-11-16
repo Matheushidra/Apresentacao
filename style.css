@@ -1,0 +1,61 @@
+/* ==========================================================
+   ARQUIVO CSS EXTERNO - CONTÉM OS RECURSOS NOVOS DO PROJETO
+   ========================================================== */
+
+/* RECURSO NOVO 1: Rolagem Suave (Smooth Scroll)
+   Quando o usuário clica em um link do menu no topo, em vez da 
+   tela "pular" instantaneamente, ela desliza suavemente até a seção. */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Compensação da altura do menu fixo (navbar).
+   Ao rolar para a âncora, o menu fixo fica por cima do título.
+   O scroll-margin-top força uma "margem" invisível para a tela parar
+   antes do título ser coberto pelo menu. */
+section {
+    scroll-margin-top: 70px;
+}
+
+/* ==========================================================
+   AJUSTES GERAIS DE IMAGEM
+   ========================================================== */
+
+/* Ajustes sugeridos no Carousel:
+   Força o item a ter no máximo 80% da altura da tela visível (80vh),
+   para o usuário ver que há conteúdo abaixo do slide. */
+.carousel-item {
+    height: 80vh;
+}
+
+/* Faz a imagem preencher a altura da div do carousel, usando object-fit: cover 
+   para impedir que ela seja distorcida (ela corta as sobras como se fosse zoom). */
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Ajuste padrão para que todas as imagens dos cards de Projetos
+   tenham a mesma altura de 200px, impedindo que os cards fiquem tortos. */
+.project-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* ==========================================================
+   RECURSO NOVO 2: EFEITO VISUAL NOS CARDS (HOVER ANIMATION)
+   ========================================================== */
+
+/* Define que os movimentos aplicados na classe terão uma transição 
+   de 0.3 segundos. Isso cria a fluidez em vez de mudar de forma brusca. */
+.card-animado {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Quando o usuário passa o mouse por cima (:hover), aplicamos duas coisas:
+   1. transform: translateY(-10px) -> faz o elemento "flutuar" 10 pixels pra cima
+   2. box-shadow -> Aumenta a sombra projetada, simulando que ele se aproximou da tela */
+.card-animado:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
